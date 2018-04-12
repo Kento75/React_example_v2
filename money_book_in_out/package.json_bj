@@ -1,0 +1,22 @@
+{
+  "name": "React_example_v2",
+  "version": "1.0.0",
+  "description": "Hello React",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "webpack": "webpack -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kento75/React_example_v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kento75/React_example_v2/issues"
+  },
+  "homepage": "https://github.com/Kento75/React_example_v2#readme"
+}

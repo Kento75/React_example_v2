@@ -5,7 +5,7 @@ import './index.css';
 
 
 class JyankenGamePage extends Component {
-  constructor(porps) {
+  constructor(props) {
     super(props)
     this.state = {
       human: null,
@@ -26,6 +26,20 @@ class JyankenGamePage extends Component {
       return (this.state.computer - this.state.human + 3) % 3
     }
   }
+
+  componentDidMount() {
+    setTimeout(() => {this.pon(1)}, 1000)
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    const identical = nextState.human == this.state.human
+                 && nextState.computer == this.state.computer
+    if(identical) {
+      console.log("*Identical*")
+    }
+    return !identical
+  }
+
   render() {
     return (
       <div>
@@ -33,7 +47,7 @@ class JyankenGamePage extends Component {
         <JyankenBox actionPon={(te) => this.pon(te)} />
         <ScoreBox human={this.state.human} computer={this.state.computer}
         judgment={this.judge()} />
-      </dev>
+      </div>
     )
   }
 }
@@ -48,7 +62,7 @@ const JyankenBox = (props) => {
   )
 }
 
-JyankenBox.PropTypes = {
+JyankenBox.propTypes = {
   actionPon: PropTypes.func
 }
 
@@ -66,7 +80,7 @@ const ScoreBox = (props) => {
   )
 }
 
-ScoreBox.PropTypes = {
+ScoreBox.propTypes = {
   human: PropTypes.number,
   computer: PropTypes.number,
   judgment: PropTypes.number
