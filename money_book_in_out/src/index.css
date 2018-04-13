@@ -6,3 +6,19 @@
   border: solid 1px;
   padding: 1px 15px;
 }
+
+.entry {
+  margin-top: 20px;
+  width: 300px;
+}
+
+.entry inpu[type="submit"] {
+  margin-top: 10px;
+  width: 60px;
+  font-size: 120%;
+}
+
+.entry input[type="radio"] {
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
